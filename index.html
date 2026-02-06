@@ -425,13 +425,13 @@
                                 </div>
                             </div>
 
-                            <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')} className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold text-lg py-4 rounded shadow-lg transform active:scale-95 transition-all hover:brightness-110 relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                            <button onClick={() => { setIsOpen(false); document.getElementById('voices').scrollIntoView({ behavior: 'smooth' }); }} className="block w-full bg-gradient-to-r from-luxury-navy to-gray-800 text-white font-bold text-lg py-5 rounded shadow-lg transform active:scale-95 transition-all hover:brightness-110 relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                                 <span className="relative flex items-center justify-center gap-2">
-                                    <i className="fab fa-line text-2xl"></i>
-                                    今すぐ予約枠を確保する
+                                    <i className="fas fa-comments text-2xl text-luxury-gold"></i>
+                                    実績・口コミを確認する
                                 </span>
-                            </a>
+                            </button>
 
                             <button onClick={() => setIsOpen(false)} className="mt-4 text-xs text-gray-400 underline hover:text-gray-600">
                                 閉じてサイトを見る
