@@ -291,6 +291,47 @@
             );
         };
 
+        const ChildcareService = () => (
+            <div className="bg-white py-12 px-4 border-b border-gray-100">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-8">
+                        <span className="text-luxury-navy font-bold tracking-widest text-xs uppercase block mb-2">SERVICE</span>
+                        <h3 className="font-serif font-bold text-2xl text-[#5d5c58]">
+                            無料の託児サービス<br /><span className="text-base font-normal">お子様連れでも安心</span>
+                        </h3>
+                        <div className="w-12 h-0.5 bg-luxury-gold mx-auto mt-4"></div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row items-center gap-8 bg-[#fdfbf7] p-6 rounded-lg shadow-sm border border-[#eebbcb]/30">
+                        <div className="w-full md:w-1/2">
+                            <img src="./images/childcare.jpg" alt="託児サービスの様子" className="rounded-lg shadow-md w-full h-auto object-cover" />
+                        </div>
+                        <div className="w-full md:w-1/2 text-left">
+                            <h4 className="font-serif font-bold text-xl text-luxury-navy mb-4">
+                                ママが施術に集中できる環境を
+                            </h4>
+                            <p className="text-[#5d5c58] text-sm leading-7 mb-4">
+                                「子供が泣いたらどうしよう…」<br />
+                                「預け先がなくて行けない…」<br />
+                                そんなママさんもご安心ください。
+                            </p>
+                            <p className="text-[#5d5c58] text-sm leading-7 font-bold bg-white p-4 rounded border-l-4 border-luxury-gold shadow-sm">
+                                看護師免許保有の女性スタッフが施術中に見守るから、安心して施術を受けていただけます。
+                            </p>
+                            <div className="mt-4 flex gap-2">
+                                <span className="bg-[#eebbcb] text-[#5d5c58] text-xs font-bold px-2 py-1 rounded">
+                                    <i className="fas fa-check mr-1"></i>ベビーカー入店可
+                                </span>
+                                <span className="bg-[#eebbcb] text-[#5d5c58] text-xs font-bold px-2 py-1 rounded">
+                                    <i className="fas fa-check mr-1"></i>バウンサー完備
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+
         const Offer = () => (
             <div className="bg-white px-4 py-16 border-t border-gray-200">
                 <div className="max-w-xl mx-auto text-center border-4 border-luxury-gold rounded-lg p-8 shadow-2xl relative overflow-hidden bg-[#fff0f5] text-[#5d5c58]">
@@ -321,7 +362,7 @@
                                 <span className="text-xs">名！</span>
                             </div>
 
-                            <p className="text-gray-400 text-xs line-through mb-1">通常初回 6,400円</p>
+                            <p className="text-gray-400 text-xs line-through mb-1">通常初回 4,000円</p>
                             <div className="flex items-end justify-center gap-1 leading-none">
                                 <span className="text-7xl font-serif font-bold tracking-tighter text-luxury-accent">2,000</span>
                                 <span className="text-xl font-bold mb-3">円</span>
@@ -426,7 +467,7 @@
                                 </p>
 
                                 <div className="py-2">
-                                    <p className="text-xs text-gray-400 line-through mb-0.5">通常初回 6,400円</p>
+                                    <p className="text-xs text-gray-400 line-through mb-0.5">通常初回 4,000円</p>
                                     <div className="text-5xl font-black text-luxury-accent font-serif leading-none drop-shadow-sm">
                                         2,000<span className="text-lg font-bold ml-1 text-gray-600">円</span>
                                     </div>
@@ -462,6 +503,7 @@
                     <SocialProof />
                     <Hero />
                     <Voices />
+                    <ChildcareService />
                     <Offer />
                     <Footer />
                     <StickyCTA />
