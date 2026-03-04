@@ -528,11 +528,11 @@
                                 </div>
                             </div>
 
-                            <button onClick={() => { setIsOpen(false); document.getElementById('concept').scrollIntoView({ behavior: 'smooth' }); }} className="block w-full bg-gradient-to-r from-luxury-navy to-gray-800 text-white font-bold text-lg py-5 rounded shadow-lg transform active:scale-95 transition-all hover:brightness-110 relative overflow-hidden group">
+                            <button onClick={() => { setIsOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block w-full bg-gradient-to-r from-luxury-navy to-gray-800 text-white font-bold text-lg py-5 rounded shadow-lg transform active:scale-95 transition-all hover:brightness-110 relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                                 <span className="relative flex items-center justify-center gap-2">
                                     <i className="fas fa-play-circle text-2xl text-luxury-gold"></i>
-                                    当院が選ばれる理由を見る
+                                    トップページから詳細を見る
                                 </span>
                             </button>
 
