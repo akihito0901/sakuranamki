@@ -209,7 +209,7 @@
             </div>
         );
         const ConceptMessage = () => (
-            <div className="relative bg-luxury-black text-white py-24 overflow-hidden">
+            <div className="relative bg-luxury-black text-white py-16 overflow-hidden w-full">
                 <div className="absolute inset-0 z-0">
                     <video
                         src="./images/message.mov"
@@ -218,13 +218,13 @@
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-luxury-black/90 via-luxury-navy/70 to-luxury-black/90"></div>
                 </div>
-                <div className="relative z-10 container mx-auto px-6 text-center shadow-lg">
-                    <span className="text-luxury-gold tracking-widest text-xs font-bold uppercase block mb-4 animate-pulse">DIRECTOR'S MESSAGE</span>
-                    <h3 className="font-serif text-2xl md:text-3xl font-bold mb-8 leading-relaxed">
+                <div className="relative z-10 px-6 text-center shadow-lg w-full">
+                    <span className="text-luxury-gold tracking-widest text-xs font-bold uppercase block mb-3 animate-pulse">DIRECTOR'S MESSAGE</span>
+                    <h3 className="font-serif text-2xl font-bold mb-6 leading-relaxed">
                         なぜ、あなたの痛みは<br />
                         <span className="gold-text">マッサージで治らない</span>のか？
                     </h3>
-                    <div className="max-w-2xl mx-auto text-sm md:text-base text-gray-200 space-y-6 text-justify leading-loose border-l-2 border-luxury-gold pl-4 bg-black/20 p-4 rounded-sm backdrop-blur-sm">
+                    <div className="w-full text-sm text-gray-200 space-y-4 text-justify leading-loose border-l-2 border-luxury-gold pl-4 bg-black/20 p-4 rounded-sm backdrop-blur-sm">
                         <p>
                             「その場は気持ちいいけれど、翌日にはまた痛みが戻ってしまう」<br />
                             もしあなたがそう感じているなら、それは痛みの『根本』にアプローチできていないからです。
@@ -233,7 +233,7 @@
                             私たちの院では、慰安目的の表面的なマッサージは一切行いません。<br />
                             指が届かないほどの深部にある「インナーマッスル（深層筋）」の強烈なコリを、独自の技術で確実に取り除きます。
                         </p>
-                        <p className="font-bold text-white text-base mt-6 border-b border-luxury-gold/50 inline-block pb-1">
+                        <p className="font-bold text-white text-base mt-4 border-b border-luxury-gold/50 inline-block pb-1">
                             長年の痛みに、ここで最後の答えを出しましょう。
                         </p>
                     </div>
@@ -241,9 +241,9 @@
             </div>
         );
 
-        const FeatureSection = ({ number, title, desc, mediaSrc, isVideo = false, reverse = false }) => (
-            <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center bg-luxury-black border-b border-gray-800`}>
-                <div className="w-full md:w-1/2 relative h-64 md:h-96 overflow-hidden">
+        const FeatureSection = ({ number, title, desc, mediaSrc, isVideo = false }) => (
+            <div className="flex flex-col w-full bg-luxury-black border-b border-gray-800">
+                <div className="w-full relative h-64 overflow-hidden">
                     {isVideo ? (
                         <video src={mediaSrc} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000" />
                     ) : (
@@ -251,13 +251,13 @@
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
-                <div className="w-full md:w-1/2 p-8 md:p-12 lg:p-16">
-                    <div className="flex items-center gap-4 mb-4">
+                <div className="w-full p-8">
+                    <div className="flex items-center gap-4 mb-3">
                         <div className="text-luxury-gold font-serif font-black text-4xl opacity-50">{number}</div>
                         <div className="h-px bg-luxury-gold w-12"></div>
                     </div>
-                    <h4 className="font-serif text-xl md:text-2xl font-bold text-white mb-4 leading-snug">{title}</h4>
-                    <p className="text-sm md:text-base text-gray-300 leading-relaxed text-justify font-sans">
+                    <h4 className="font-serif text-xl font-bold text-white mb-4 leading-snug">{title}</h4>
+                    <p className="text-sm text-gray-300 leading-relaxed text-justify font-sans">
                         {desc}
                     </p>
                 </div>
@@ -265,8 +265,8 @@
         );
 
         const USPFeatures = () => (
-            <div className="bg-luxury-black pt-16 pb-8 border-t border-luxury-gold/20">
-                <div className="text-center mb-12 px-4">
+            <div className="bg-luxury-black pt-12 pb-8 border-t border-luxury-gold/20 w-full overflow-hidden">
+                <div className="text-center mb-8 px-4 w-full">
                     <span className="text-luxury-gold tracking-widest text-xs font-bold uppercase block mb-2">3 REASONS</span>
                     <h3 className="font-serif text-2xl font-bold text-white">
                         当院が選ばれる<br />
@@ -280,7 +280,6 @@
                     desc="表面の筋肉だけを揉みほぐす一般的な施術とは異なり、骨に最も近い深部のコリをピンポイントで捉えます。熟練の自費治療技術だからこそ可能な、痛みの根本からの解放を体験してください。"
                     mediaSrc="./images/technique.mov"
                     isVideo={true}
-                    reverse={false}
                 />
                 <FeatureSection
                     number="02"
@@ -288,7 +287,6 @@
                     desc="なぜ痛むのか。その理由は一人ひとり全く異なります。私たちは一方的に施術を始めることはありません。国家資格者の知見に基づき、あなたの日常生活のクセから痛みの引き金を探り出します。"
                     mediaSrc="./images/counseling.jpg"
                     isVideo={false}
-                    reverse={true}
                 />
                 <FeatureSection
                     number="03"
@@ -296,7 +294,6 @@
                     desc="「子供がいるから通えない…」そんなお悩みを解決するため、当院では看護師免許を保有する女性スタッフが常駐するキッズスペースを完備。心からリラックスして施術を受けていただける環境をご用意しています。"
                     mediaSrc="./images/childcare.png"
                     isVideo={false}
-                    reverse={false}
                 />
             </div>
         );
