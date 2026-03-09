@@ -159,14 +159,14 @@
         const { useState, useEffect } = React;
 
         const LinePromoCTA = ({ className = "" }) => (
-            <div className={`w-full text-center px-4 ${className}`}>
+            <div className={`w-full flex justify-center px-4 ${className}`}>
                 <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')} className="inline-block w-full md:max-w-md bg-gradient-to-br from-[#06C755] to-[#04a044] text-white font-bold py-4 rounded shadow-2xl transform active:scale-95 transition-all overflow-hidden border border-[#04a044]/50 relative group">
                     <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-12 -ml-10 group-hover:animate-[translate-x-full_1s_ease-in-out_infinite]"></div>
                     <div className="flex flex-col items-center justify-center gap-1 z-10 relative">
                         <span className="text-[10px] md:text-xs font-normal tracking-widest bg-black/20 px-3 py-1 rounded-full mb-1">
                             ＼ 24時間受付・LINEで完結 ／
                         </span>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 px-2">
                             <i className="fab fa-line text-3xl md:text-4xl drop-shadow-md"></i>
                             <span className="text-xl md:text-2xl drop-shadow-md tracking-wide">無料チェックリストを受け取る</span>
                         </div>
@@ -503,8 +503,8 @@
                     </div>
 
                     {/* Repeated LINE Bonus Area */}
-                    <div className="w-full -mx-4 pb-8 mb-8">
-                        <img src="./images/line-bonus-cta.png" alt="LINE限定無料プレゼント" className="w-[calc(100%+32px)] h-auto block mb-8" />
+                    <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] pb-8 mb-8">
+                        <img src="./images/line-bonus-cta.png" alt="LINE限定無料プレゼント" className="w-full h-auto block mb-8" />
                         <LinePromoCTA className="mb-4" />
                     </div>
 
