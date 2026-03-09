@@ -178,6 +178,20 @@
             </div>
         );
 
+        const StickyHeader = () => (
+            <div className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm z-50">
+                <div className="max-w-md mx-auto flex items-center justify-between px-3 py-2">
+                    <a href="#" className="flex-shrink-0">
+                        <img src="./images/header-logo.png" alt="桜並木駅前の整骨院" className="h-10 w-auto" />
+                    </a>
+                    <a href="https://maps.app.goo.gl/SVMYspHp6BMLiEwa7" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 bg-luxury-navy text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:brightness-110 transition-all active:scale-95">
+                        <i className="fas fa-map-marker-alt text-luxury-gold"></i>
+                        <span>Googleマップで確認</span>
+                    </a>
+                </div>
+            </div>
+        );
+
         const SocialProof = () => (
             <div className="bg-luxury-navy text-white py-6 border-b-2 border-luxury-gold">
                 <div className="container mx-auto px-4 text-center">
@@ -214,17 +228,13 @@
                     />
                 </div>
 
-                <div className="relative z-20 px-4 py-20 text-center">
+                <div className="relative z-20 px-4 py-20 pt-28 text-center">
                     <div className="inline-block border border-luxury-gold text-white bg-black/40 backdrop-blur-sm px-6 py-2 rounded-sm text-sm mb-6 tracking-wide font-serif shadow-lg">
                         まだ、その痛みを諦めないでください
                     </div>
-                    <h1 className="flex flex-col gap-6 items-center font-serif font-bold mb-8 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] text-shadow">
-                        <span className="text-3xl">マッサージで治らない</span>
-                        <div className="flex items-baseline gap-1 flex-wrap justify-center">
-                            <span className="text-4xl md:text-5xl gold-text drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] whitespace-nowrap">「深層のコリ」</span>
-                            <span className="text-3xl text-white">に、</span>
-                        </div>
-                        <span className="text-3xl">最後の答えを。</span>
+                    <h1 className="flex flex-col gap-4 items-center font-serif font-bold mb-8 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] text-shadow">
+                        <span className="text-3xl">心と体に</span>
+                        <span className="text-4xl md:text-5xl gold-text drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">「優しい整体」</span>
                     </h1>
                     <div className="flex justify-center">
                         <p className="text-white text-xs bg-black/60 backdrop-blur-sm px-4 py-2 rounded border-l-2 border-luxury-gold shadow-md">
@@ -623,6 +633,7 @@
         const App = () => {
             return (
                 <div className="w-full max-w-md mx-auto shadow-2xl bg-white min-h-screen relative my-0 md:my-8 font-sans">
+                    <StickyHeader />
                     <WelcomeModal />
                     <SocialProof />
                     <Hero />
