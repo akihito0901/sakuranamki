@@ -503,31 +503,14 @@
                     </div>
 
                     {/* Repeated LINE Bonus Area */}
-                    <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] pb-8 mb-8">
-                        <img src="./images/line-bonus-cta.png" alt="LINE限定無料プレゼント" className="w-full h-auto block mb-8" />
-                        <LinePromoCTA className="mb-4" />
-                    </div>
-
-                    {/* Luxurious CTA Button */}
-                    <div className="relative group mt-8 pt-8 border-t border-luxury-gold/20">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-green-600 rounded-lg blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
-                        <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')} className="relative block w-full bg-gradient-to-br from-[#06C755] to-[#04a044] text-white font-bold text-xl py-6 rounded-lg shadow-2xl transform active:scale-95 transition-all outline outline-2 outline-offset-2 outline-green-500/50 overflow-hidden">
-                            <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-12 -ml-10 group-hover:animate-[translate-x-full_1s_ease-in-out_infinite]"></div>
-                            <div className="flex flex-col items-center justify-center gap-1 z-10 relative">
-                                <span className="text-xs font-normal tracking-widest bg-black/20 px-3 py-1 rounded-full mb-1">
-                                    ＼ 24時間受付・LINEで完結 ／
-                                </span>
-                                <div className="flex items-center gap-3">
-                                    <i className="fab fa-line text-4xl shadow-sm"></i>
-                                    <span className="text-2xl drop-shadow-md tracking-wide">今すぐ特別価格で予約する</span>
-                                </div>
-                                <span className="text-[11px] font-normal mt-2 opacity-80">
-                                    ※タップするとLINEアプリが開きます (相談無料 / 特典PDFもこちらから)
-                                </span>
-                            </div>
-                        </a>
-                    </div>
                 </div>
+            </div>
+        );
+
+        const LineBonusRepeat = () => (
+            <div className="w-full bg-luxury-navy pb-16 pt-6 border-t border-luxury-gold/30 overflow-hidden">
+                <img src="./images/line-bonus-cta.png" alt="LINE限定無料プレゼント" className="w-full h-auto block mb-10" />
+                <LinePromoCTA />
             </div>
         );
 
@@ -649,6 +632,7 @@
                     <Voices />
                     <ConceptMessage />
                     <Offer />
+                    <LineBonusRepeat />
                     <Footer />
                     <StickyCTA />
                 </div>
