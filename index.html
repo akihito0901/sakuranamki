@@ -243,7 +243,7 @@
                     </div>
 
                     <h1 className="flex flex-col gap-3 items-center font-serif font-bold mb-8 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] text-shadow">
-                        <span className="text-3xl md:text-4xl leading-relaxed">肩や首の<span className="inline-block relative" style={{ textEmphasis: 'filled dot', WebkitTextEmphasis: 'filled dot', WebkitTextEmphasisColor: '#c5a059', textEmphasisColor: '#c5a059' }}>コリ</span>を</span>
+                        <span className="text-3xl md:text-4xl leading-relaxed">肩や首の<span className="inline-block relative" style={{ textEmphasis: 'filled dot', WebkitTextEmphasis: 'filled dot', WebkitTextEmphasisColor: 'white', textEmphasisColor: 'white' }}>コリ</span>を</span>
                         <span className="text-4xl md:text-5xl gold-text drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] leading-relaxed tracking-wide mt-2">根本から解き放つ</span>
                     </h1>
                     <div className="flex justify-center">
@@ -467,6 +467,117 @@
             );
         };
 
+        const ScapulaAttention = () => (
+            <div className="bg-luxury-navy text-white pt-20 pb-20 px-4 border-b border-luxury-gold/20 w-full overflow-hidden">
+                <div className="max-w-4xl mx-auto text-center">
+                    <div className="mb-8">
+                        <span className="text-luxury-gold tracking-widest text-xs font-bold uppercase block mb-2">WHY EFFECTIVE?</span>
+                        <h3 className="font-serif text-2xl md:text-3xl font-bold leading-relaxed mb-2">
+                            なぜ「<span className="gold-text">肩甲骨はがし</span>」が<br className="md:hidden" />
+                            肩こりに効果抜群なのか？
+                        </h3>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm border border-luxury-gold/30 rounded-lg p-6 md:p-10 text-left shadow-2xl relative">
+                        <i className="fas fa-check-circle absolute top-4 right-4 text-luxury-gold/20 text-5xl"></i>
+                        <p className="text-sm md:text-lg leading-loose text-gray-200 mb-6 font-sans">
+                            肩甲骨は、なんと<strong className="text-white font-bold text-lg md:text-xl border-b-[2px] border-luxury-gold px-1 mx-1">17種類以上</strong>の筋肉と繋がっています。<br className="hidden md:block" />
+                            その多くが首や肩につながる、奥深くにある<strong>深層筋</strong>です。
+                        </p>
+                        <p className="text-sm md:text-lg leading-loose text-gray-200 mb-6 font-sans">
+                            つまり、肩甲骨を動かさないとこれらの筋肉が癒着して固まり、<br className="hidden md:block" />
+                            どれだけ表面を揉んでも解決しない頑固な「コリ」と「痛み」の元凶となります。
+                        </p>
+                        <div className="bg-luxury-gold/10 border-l-[3px] border-luxury-gold p-4 mt-8 rounded-r">
+                            <p className="text-sm md:text-base leading-loose text-white font-bold">
+                                当院はこの<span className="text-luxury-navy font-bold bg-luxury-gold px-2 py-0.5 rounded mx-1 text-base md:text-lg">深層筋へのアプローチ</span>を得意としています。<br />
+                                こびりついた肩甲骨周りの癒着を丁寧に剥がすことで、<br className="hidden md:block" />
+                                驚くほど肩や首が軽くなるのを実感いただけます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const DirectorProfile = () => (
+            <div className="bg-white py-24 md:py-32 px-4 border-t border-luxury-gold/20 w-full overflow-hidden">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-12">
+                        <span className="text-luxury-gold tracking-widest text-xs font-bold uppercase block mb-2">DIRECTOR</span>
+                        <h3 className="font-serif text-2xl md:text-3xl font-bold text-luxury-navy">
+                            院長紹介
+                        </h3>
+                        <div className="w-12 h-0.5 bg-luxury-gold mx-auto mt-4"></div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-50 p-6 md:p-10 rounded-lg shadow-lg border border-gray-100 relative">
+                        <i className="fas fa-quote-left absolute top-4 left-4 text-luxury-gold/20 text-4xl"></i>
+
+                        <div className="w-full md:w-2/5 flex-shrink-0 z-10">
+                            <div className="relative rounded-lg overflow-hidden border-2 border-luxury-gold shadow-xl">
+                                <img src="./images/director.jpg" alt="院長" className="w-full h-auto object-cover" />
+                                <div className="absolute bottom-0 left-0 w-full bg-black/70 backdrop-blur-sm text-white text-center py-2 text-sm font-bold tracking-widest">
+                                    桜並木駅前の整骨院 院長
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full md:w-3/5 space-y-4 z-10">
+                            <h4 className="font-serif text-xl md:text-2xl font-bold text-luxury-navy mb-4 border-b border-gray-200 pb-3 leading-snug">
+                                経験に裏打ちされた<br className="md:hidden" /><span className="text-luxury-gold">確かな技術</span>で<br />あなたをサポートします
+                            </h4>
+                            <p className="text-gray-700 leading-relaxed text-justify font-sans text-sm md:text-base">
+                                10年以上のキャリアと、1万件を超える豊富な施術経験で培った独自技術を活かし、2025年に当院をオープンいたしました。
+                            </p>
+                            <p className="text-gray-700 leading-relaxed text-justify font-sans text-sm md:text-base bg-white/60 p-3 rounded border-l-4 border-luxury-gold">
+                                おかげさまで、オープン初月には<span className="font-bold text-luxury-navy">90名のご予約</span>をいただき、現在までに<span className="font-bold text-luxury-navy border-b border-luxury-gold">累計600名以上</span>の患者様にご来院いただいております。
+                            </p>
+                            <p className="text-gray-700 leading-relaxed text-justify font-sans text-sm md:text-base pt-2">
+                                長年続くつらい痛みや不調。もう治らないと諦める前に、ぜひ一度当院へご相談ください。その場しのぎではない「痛みの根本からの解放」へ向けて、全力で向き合います。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+
+        const ReservationCounter = () => {
+            const [count, setCount] = useState(625);
+
+            useEffect(() => {
+                const baseDate = new Date('2026-03-13T00:00:00+09:00');
+                const now = new Date();
+                const diffTime = Math.max(0, now.getTime() - baseDate.getTime());
+                const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+                setCount(625 + (diffDays * 4));
+            }, []);
+
+            return (
+                <div className="bg-luxury-black py-16 px-4 border-b-2 border-luxury-gold/50 text-center relative overflow-hidden w-full">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-luxury-gold/10 via-luxury-black to-luxury-black"></div>
+                    <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center justify-center">
+                        <div className="inline-block bg-luxury-navy/80 border border-luxury-gold/40 text-luxury-goldLight text-xs md:text-sm font-bold tracking-widest mb-6 px-4 py-1.5 rounded-full shadow-lg">
+                            <i className="fas fa-chart-line mr-2"></i>連日多くのご来院ありがとうございます
+                        </div>
+                        <h3 className="font-serif text-lg md:text-xl text-white mb-6">
+                            現在の<span className="text-luxury-gold px-1">累計ご来院者数</span>（推定）
+                        </h3>
+
+                        <div className="flex items-baseline justify-center gap-2 bg-gradient-to-br from-gray-900 to-black px-10 py-5 rounded-2xl shadow-[0_0_40px_rgba(197,160,89,0.15)] border-2 border-luxury-gold/30">
+                            <span className="text-6xl md:text-7xl font-black font-serif text-transparent bg-clip-text bg-gradient-to-b from-white via-gray-200 to-gray-500 drop-shadow-lg tracking-wider">
+                                {count.toLocaleString()}
+                            </span>
+                            <span className="text-xl md:text-2xl text-luxury-gold font-bold ml-3 pb-1">名突破!</span>
+                        </div>
+                        <div className="mt-6 flex flex-col items-center gap-2">
+                            <p className="text-xs text-gray-400 bg-black/40 px-3 py-1 rounded">
+                                ※2026年3月13日時点の基準値(625名)より自動算出しています
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
         const Offer = () => (
             <div className="bg-luxury-navy px-4 py-24 md:py-32 border-t-[3px] border-luxury-gold w-full overflow-hidden relative shadow-2xl">
                 {/* Background Pattern */}
@@ -647,6 +758,7 @@
                     <WelcomeModal />
                     <SocialProof />
                     <Hero />
+                    <ScapulaAttention />
                     <PainPoints />
                     <USPFeatures />
                     <FutureBenefits />
