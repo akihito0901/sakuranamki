@@ -229,11 +229,21 @@
                 </div>
 
                 <div className="relative z-20 px-4 pt-28 pb-16 md:pt-36 md:pb-24 text-center min-h-[75vh] flex flex-col items-center justify-center">
-                    <div className="inline-block border-y-2 border-red-500 text-white bg-gradient-to-r from-red-600 via-orange-500 to-red-600 backdrop-blur-md px-6 py-3 rounded-sm text-base md:text-lg mb-8 tracking-wider font-sans shadow-2xl font-black">
-                        <span className="drop-shadow-md">深層筋集中整体</span> <span className="opacity-80 text-sm mx-1">×</span> 話題の肩甲骨はがし
+
+                    {/* Premium Glowing Red Banner */}
+                    <div className="relative inline-block mb-10 group">
+                        {/* Glow effect */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-luxury-gold opacity-40 blur-lg group-hover:opacity-60 transition duration-1000 rounded-lg"></div>
+                        {/* Banner body */}
+                        <div className="relative border-y border-luxury-gold bg-gradient-to-r from-[rgba(60,0,0,0.85)] via-[rgba(150,0,0,0.95)] to-[rgba(60,0,0,0.85)] backdrop-blur-md px-6 py-2.5 md:px-8 md:py-3 rounded-sm text-sm md:text-base tracking-widest font-serif shadow-2xl font-bold flex items-center justify-center border-x border-x-luxury-gold/30">
+                            <span className="text-luxury-goldLight drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">深層筋集中整体</span>
+                            <span className="text-white/50 text-xs md:text-sm mx-3">×</span>
+                            <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">話題の肩甲骨はがし</span>
+                        </div>
                     </div>
+
                     <h1 className="flex flex-col gap-3 items-center font-serif font-bold mb-8 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] text-shadow">
-                        <span className="text-3xl md:text-4xl leading-relaxed">肩や首の<span className="inline-block" style={{ textEmphasis: 'filled dot', WebkitTextEmphasis: 'filled dot' }}>コリ</span>を</span>
+                        <span className="text-3xl md:text-4xl leading-relaxed">肩や首の<span className="inline-block relative" style={{ textEmphasis: 'filled dot', WebkitTextEmphasis: 'filled dot', WebkitTextEmphasisColor: '#c5a059', textEmphasisColor: '#c5a059' }}>コリ</span>を</span>
                         <span className="text-4xl md:text-5xl gold-text drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] leading-relaxed tracking-wide mt-2">根本から解き放つ</span>
                     </h1>
                     <div className="flex justify-center">
