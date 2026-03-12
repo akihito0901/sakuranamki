@@ -160,17 +160,17 @@
 
         const LinePromoCTA = ({ className = "" }) => (
             <div className={`w-full flex justify-center px-4 ${className}`}>
-                <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')} className="inline-block w-full md:max-w-md bg-gradient-to-br from-[#06C755] to-[#04a044] text-white font-bold py-4 rounded shadow-2xl transform active:scale-95 transition-all overflow-hidden border border-[#04a044]/50 relative group">
+                <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')} className="inline-block w-full md:max-w-md bg-gradient-to-br from-[#06C755] to-[#04a044] text-white font-bold py-4 md:py-5 rounded shadow-[0_10px_30px_rgba(6,199,85,0.4)] transform hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(6,199,85,0.5)] active:scale-95 transition-all overflow-hidden border border-[#04a044]/50 relative group">
                     <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-12 -ml-10 group-hover:animate-[translate-x-full_1s_ease-in-out_infinite]"></div>
                     <div className="flex flex-col items-center justify-center gap-1 z-10 relative">
                         <span className="text-[10px] md:text-xs font-normal tracking-widest bg-black/20 px-3 py-1 rounded-full mb-1">
                             ＼ 24時間受付・LINEで完結 ／
                         </span>
-                        <div className="flex items-center gap-2 px-2">
+                        <div className="flex items-center gap-2 px-2 mt-1">
                             <i className="fab fa-line text-3xl md:text-4xl drop-shadow-md"></i>
                             <span className="text-xl md:text-2xl drop-shadow-md tracking-wide">無料チェックリストを受け取る</span>
                         </div>
-                        <span className="text-[10px] md:text-[11px] font-normal mt-1 opacity-90">
+                        <span className="text-[10px] md:text-[11px] font-normal mt-2 opacity-90 inline-block">
                             ※タップするとLINEアプリが開きます
                         </span>
                     </div>
@@ -384,8 +384,8 @@
                 />
 
                 {/* --- Injected LINE Bonus Area --- */}
-                <div className="w-full mt-0 bg-luxury-navy pb-24 pt-16 md:pt-20 border-t border-luxury-gold/30 overflow-hidden">
-                    <img src="./images/line-bonus-cta.png" alt="LINE限定無料プレゼント" className="w-full h-auto block mb-10" />
+                <div className="w-full mt-0 bg-white pb-24 pt-16 md:pt-20 border-t border-luxury-gold/30 overflow-hidden">
+                    <img src="./images/line-bonus-new.png" alt="LINE限定無料プレゼント" className="w-full h-auto block mb-8" />
 
                     <LinePromoCTA />
 
@@ -639,8 +639,8 @@
         );
 
         const LineBonusRepeat = () => (
-            <div className="w-full bg-luxury-navy pb-32 pt-16 md:pt-20 border-t border-luxury-gold/30 overflow-hidden">
-                <img src="./images/line-bonus-cta.png" alt="LINE限定無料プレゼント" className="w-full h-auto block mb-10" />
+            <div className="w-full bg-white pb-32 pt-16 md:pt-20 border-t border-luxury-gold/30 overflow-hidden">
+                <img src="./images/line-bonus-new.png" alt="LINE限定無料プレゼント" className="w-full h-auto block mb-8" />
                 <LinePromoCTA />
             </div>
         );
