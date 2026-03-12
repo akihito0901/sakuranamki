@@ -295,39 +295,6 @@
             </div>
         );
 
-        const ConceptMessage = () => (
-            <div id="concept" className="relative bg-luxury-black text-white py-24 md:py-32 overflow-hidden w-full">
-                <div className="absolute inset-0 z-0">
-                    <video
-                        src="./images/message.mp4"
-                        autoPlay muted loop playsInline
-                        className="w-full h-full object-cover opacity-40 mix-blend-screen"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-luxury-black/90 via-luxury-navy/70 to-luxury-black/90"></div>
-                </div>
-                <div className="relative z-10 px-6 text-center shadow-lg w-full">
-                    <span className="text-luxury-gold tracking-widest text-xs font-bold uppercase block mb-3 animate-pulse">DIRECTOR'S MESSAGE</span>
-                    <h3 className="font-serif text-2xl font-bold mb-6 leading-relaxed">
-                        なぜ、あなたの痛みは<br />
-                        <span className="gold-text">マッサージで治らない</span>のか？
-                    </h3>
-                    <div className="w-full text-sm text-gray-200 space-y-4 text-justify leading-loose border-l-2 border-luxury-gold pl-4 bg-black/20 p-4 rounded-sm backdrop-blur-sm">
-                        <p>
-                            「その場は気持ちいいけれど、翌日にはまた痛みが戻ってしまう」<br />
-                            もしあなたがそう感じているなら、それは痛みの『根本』にアプローチできていないからです。
-                        </p>
-                        <p>
-                            私たちの院では、慰安目的の表面的なマッサージは一切行いません。<br />
-                            指が届かないほどの深部にある「インナーマッスル（深層筋）」の強烈なコリを、独自の技術で確実に取り除きます。
-                        </p>
-                        <p className="font-bold text-white text-base mt-4 border-b border-luxury-gold/50 inline-block pb-1">
-                            長年の痛みに、ここで最後の答えを出しましょう。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        );
-
         const FeatureSection = ({ number, title, desc, mediaSrc, isVideo = false }) => (
             <div className="flex flex-col w-full bg-luxury-black border-b border-gray-800">
                 <div className="w-full relative h-64 overflow-hidden">
@@ -395,19 +362,27 @@
         );
 
         const VoiceCard = ({ name, attribute, title, content, stars = 5 }) => (
-            <div className="bg-white p-6 rounded-sm shadow-md border-t-2 border-luxury-gold relative">
-                {/* Header with Stars and User Info */}
-                <div className="flex justify-between items-end mb-3 border-b border-gray-100 pb-2">
-                    <div className="flex text-luxury-gold text-xs">
-                        {[...Array(stars)].map((_, i) => <i key={i} className="fas fa-star"></i>)}
+            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-200 relative hover:shadow-md transition-shadow">
+                {/* Header with User Info and Icon */}
+                <div className="flex justify-between items-start mb-3">
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg">
+                            {name.charAt(0)}
+                        </div>
+                        <div className="leading-tight">
+                            <div className="font-bold text-gray-800 text-sm whitespace-nowrap">{name}</div>
+                            <div className="text-[11px] text-gray-500 mt-0.5">{attribute}</div>
+                        </div>
                     </div>
-                    <div className="text-xs text-gray-500 font-bold text-right leading-tight">
-                        <span className="block text-luxury-navy mb-0.5">{attribute}</span>
-                        <span>{name}</span>
-                    </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" className="w-5 h-5 opacity-80" />
                 </div>
-                <h4 className="font-serif font-bold text-base mb-3 text-luxury-navy leading-snug">{title}</h4>
-                <p className="text-sm text-gray-600 leading-7 text-justify font-sans">
+                {/* Stars */}
+                <div className="flex text-yellow-500 text-xs mb-2 gap-0.5">
+                    {[...Array(stars)].map((_, i) => <i key={i} className="fas fa-star"></i>)}
+                </div>
+                {/* Review */}
+                <h4 className="font-bold text-sm mb-1.5 text-gray-800 leading-snug">{title}</h4>
+                <p className="text-[13px] text-gray-600 leading-relaxed font-sans text-justify">
                     {content}
                 </p>
             </div>
@@ -430,16 +405,25 @@
             ];
 
             return (
-                <div id="voices" className="bg-gray-50 py-24 md:py-32 px-4">
+                <div id="voices" className="bg-gray-50 py-24 md:py-32 px-4 border-t border-gray-200">
                     <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-14">
-                            <span className="text-luxury-gold font-bold tracking-widest text-xs uppercase block mb-2">VOICE</span>
-                            <h3 className="font-serif font-bold text-2xl text-luxury-navy">
-                                グーグルマップの口コミ<br /><span className="text-base font-normal">(一部抜粋)</span>
-                            </h3>
-                            <div className="w-12 h-0.5 bg-luxury-gold mx-auto mt-4"></div>
+                        <div className="text-center mb-12 flex flex-col items-center">
+                            <span className="text-blue-600 font-bold tracking-widest text-[10px] md:text-xs uppercase block mb-3 bg-blue-50 px-3 py-1 rounded-full w-max">Real Reviews</span>
+                            <div className="flex items-center justify-center gap-3 mb-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-6 md:h-8" />
+                                <h3 className="font-sans font-bold text-2xl md:text-3xl text-gray-800">
+                                    マップの口コミ
+                                </h3>
+                            </div>
+                            <div className="flex items-center justify-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
+                                <span className="font-bold text-gray-800 text-xl font-sans">5.0</span>
+                                <div className="flex text-yellow-500 text-lg gap-0.5">
+                                    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
+                                </div>
+                                <span className="text-sm text-gray-500 ml-1">福岡市博多区・整体</span>
+                            </div>
                         </div>
-                        <div className="grid grid-cols-1 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             {data.map((d, idx) => (
                                 <VoiceCard key={idx} name={d.name} attribute={d.attribute} title={d.t} content={d.c} />
                             ))}
@@ -762,9 +746,8 @@
                     <PainPoints />
                     <USPFeatures />
                     <FutureBenefits />
-                    <Voices />
-                    <ConceptMessage />
                     <DirectorProfile />
+                    <Voices />
                     <ReservationCounter />
                     <Offer />
                     <LineBonusRepeat />
