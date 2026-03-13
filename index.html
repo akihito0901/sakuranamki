@@ -248,12 +248,18 @@
                     </h1>
                     <div className="flex justify-center flex-col items-center gap-5 mt-2">
                         {/* Redesigned Price Badge imitating reference image layout */}
-                        <div className="bg-gradient-to-r from-red-600 to-red-800 border-2 border-luxury-gold text-white px-6 py-3 md:px-10 md:py-4 rounded-xl shadow-[0_0_20px_rgba(255,0,0,0.4)] animate-pulse-fast flex items-center gap-3 md:gap-6 relative overflow-hidden">
+                        <div className="bg-gradient-to-r from-red-600 to-red-800 border-2 border-luxury-gold text-white px-6 py-4 md:px-10 md:py-5 rounded-xl shadow-[0_0_20px_rgba(255,0,0,0.4)] animate-pulse-fast flex items-center justify-center gap-4 md:gap-8 relative overflow-visible mt-4">
+
+                            {/* Top Center Label */}
+                            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-luxury-navy border border-luxury-gold tracking-widest text-[10px] md:text-sm font-bold px-4 py-0.5 rounded text-luxury-goldLight whitespace-nowrap shadow-md z-20">
+                                今なら特別価格
+                            </div>
+
                             {/* Subtle shine effect */}
-                            <div className="absolute inset-0 w-1/4 h-full bg-white/10 skew-x-12 -ml-10 animate-[translate-x-full_3s_ease-in-out_infinite]"></div>
+                            <div className="absolute inset-0 w-1/4 h-full bg-white/10 skew-x-12 -ml-10 animate-[translate-x-full_3s_ease-in-out_infinite] z-0 rounded-xl overflow-hidden"></div>
 
                             {/* Left: Original Price Block */}
-                            <div className="flex flex-col items-start relative z-10">
+                            <div className="flex flex-col items-center relative z-10">
                                 <span className="text-[10px] md:text-xs text-luxury-goldLight tracking-wider mb-0.5">通常料金</span>
                                 <div className="flex items-baseline gap-0.5 opacity-80 decoration-luxury-gold line-through">
                                     <span className="font-serif font-bold text-lg md:text-xl">6,600</span>
@@ -263,17 +269,14 @@
                             </div>
 
                             {/* Middle: Arrow */}
-                            <i className="fas fa-caret-right text-xl md:text-2xl text-luxury-gold drop-shadow-md relative z-10"></i>
+                            <i className="fas fa-caret-right text-xl md:text-3xl text-luxury-gold drop-shadow-md relative z-10 mt-3 md:mt-4"></i>
 
                             {/* Right: Special Price Block */}
-                            <div className="flex flex-col items-start relative z-10">
-                                <div className="absolute -top-3 md:-top-4 left-0 bg-luxury-navy border border-luxury-gold tracking-widest text-[8px] md:text-[10px] font-bold px-2 py-0.5 rounded text-luxury-goldLight whitespace-nowrap shadow-sm">
-                                    今なら特別価格
-                                </div>
-                                <div className="flex items-baseline gap-0.5 pt-1">
-                                    <span className="font-serif font-black text-4xl md:text-6xl text-luxury-goldLight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] tracking-tight">1,980</span>
-                                    <span className="text-sm md:text-xl font-bold ml-1">円</span>
-                                    <span className="text-[10px] md:text-xs text-white/80">(税込)</span>
+                            <div className="flex flex-col items-start relative z-10 pt-1 md:pt-2">
+                                <div className="flex items-baseline gap-0.5">
+                                    <span className="font-serif font-black text-5xl md:text-7xl text-luxury-goldLight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] tracking-tight">1,980</span>
+                                    <span className="text-base md:text-2xl font-bold ml-1">円</span>
+                                    <span className="text-[10px] md:text-xs text-white/80 whitespace-nowrap">(税込)</span>
                                 </div>
                             </div>
                         </div>
