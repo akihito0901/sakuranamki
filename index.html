@@ -138,6 +138,7 @@
     <script>
             (function () {
                 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+                window.location.hash = "";
                 window.scrollTo(0, 0);
                 document.documentElement.scrollTop = 0;
                 document.body && (document.body.scrollTop = 0);
@@ -300,7 +301,7 @@
                 <div className="absolute top-0 right-0 w-64 h-64 bg-luxury-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
                 <div className="w-full relative z-10">
-                    <div className="mb-0 w-full overflow-hidden">
+                    <div className="mb-0 w-full overflow-hidden aspect-[16/10] bg-gray-100">
                         <img src="./images/pain-points-new.png" alt="こんなお悩みありませんか？" className="w-full h-auto object-cover block" />
                     </div>
 
@@ -322,7 +323,7 @@
                 <div className="absolute top-0 left-0 w-64 h-64 bg-luxury-gold/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
 
                 <div className="w-full relative z-10 text-center">
-                    <div className="relative mb-12">
+                    <div className="relative mb-12 aspect-[16/9] bg-luxury-navy">
                         <img src="./images/benefit.png" alt="痛みが消えたその先にある、こんな「日常」" className="w-full h-auto object-cover block relative z-20" />
                     </div>
 
@@ -697,6 +698,12 @@
 
 
         const App = () => {
+            useEffect(() => {
+                // Ensure we start at top when React component mounts
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTop = 0;
+            }, []);
+
             return (
                 <div className="w-full max-w-md mx-auto shadow-2xl bg-white min-h-screen relative my-0 md:my-8 font-sans">
                     <StickyHeader />
