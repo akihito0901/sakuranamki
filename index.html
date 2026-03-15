@@ -134,10 +134,31 @@
 </head>
 
 <body class="bg-gray-100 text-gray-800 antialiased pb-24 md:pb-0">
-    <!-- Force scroll to top on load (fixes Meta ad fbclid jump issue) -->
+    <!-- Aggressive scroll-to-top for Meta in-app browser (WebView) -->
     <script>
-        if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
-        window.scrollTo(0, 0);
+            (function () {
+                if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTop = 0;
+                document.body && (document.body.scrollTop = 0);
+
+                // Repeatedly force scroll to top for 2 seconds to override WebView scroll restoration
+                var scrollInterval = setInterval(function () {
+                    window.scrollTo(0, 0);
+                    document.documentElement.scrollTop = 0;
+                }, 50);
+                setTimeout(function () { clearInterval(scrollInterval); }, 2000);
+
+                // Also handle bfcache (back-forward cache) and late load events
+                window.addEventListener('pageshow', function () {
+                    window.scrollTo(0, 0);
+                    document.documentElement.scrollTop = 0;
+                });
+                window.addEventListener('load', function () {
+                    window.scrollTo(0, 0);
+                    document.documentElement.scrollTop = 0;
+                });
+            })();
     </script>
     <div id="root"></div>
 
@@ -698,10 +719,10 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
 
-        // Force scroll to top after React render completes (fixes Meta ad jump)
-        requestAnimationFrame(() => {
+        // Force scroll to top after React render (belt-and-suspenders for WebView)
+        requestAnimationFrame(function () {
             window.scrollTo(0, 0);
-            setTimeout(() => window.scrollTo(0, 0), 100);
+            document.documentElement.scrollTop = 0;
         });
     </script>
 </body>
