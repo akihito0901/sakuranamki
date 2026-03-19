@@ -488,15 +488,15 @@
         const QASection = () => {
             const ref = useFadeUp();
             const qaData = [
-                { q: "駐車場はありますか？", a: "はい、広い駐車場を完備しております。お車でも安心してお越しいただけます。" },
+                { q: "駐車場はありますか？", a: "タイムズ桜並木駅前をご利用下さい。施術時間分の料金は当院が負担しますので、安心してご利用下さい。" },
                 { q: "何回の通院でなおりますか？", a: "症状や個人差がありますが、多くの方が3〜5回の施術で大きな変化を実感されています。初回のカウンセリングで、おおよその回数をお伝えします。" },
-                { q: "料金はいくらですか？", a: "初回は特別価格1,980円（税込）です。2回目以降は6,400円（税込）となります。" },
+                { q: "料金はいくらですか？", a: "通常は\n・深層筋集中整体＋初診料 → 6,400円\n\nですが…\n\n＼初回限定／\nお試し体験 1,980円で受けていただけます。\n\n2回目以降は\n・保険施術：400〜800円程度\n・深層筋集中整体：4,400円\n\n※通いやすいプランもご用意していますが、無理な勧誘は一切ありませんのでご安心ください。\n\n※初回体験時に、お身体の状態に合わせた最適な通い方をわかりやすくお伝えします！" },
                 { q: "どれくらいの頻度で通院したらいいですか？", a: "最初は週1〜2回のペースをおすすめしています。改善に伴い、徐々に間隔を空けていきます。" },
                 { q: "受付時間を教えてください", a: "平日 9:00〜12:30 / 15:00〜20:00、土曜 9:00〜14:00です。日曜・祝日は休診です。" },
                 { q: "軽い症状でも行っていいですか？", a: "もちろんです！軽い症状のうちからケアすることで、重症化を予防できます。お気軽にご相談ください。" },
                 { q: "保険は使えますか？", a: "症状によっては健康保険が適用できる場合がございます。初回カウンセリング時にご確認ください。" },
                 { q: "施術時間はどれくらいですか？", a: "初回はカウンセリング含め約60分、2回目以降は約30〜40分を目安としております。" },
-                { q: "担当制ですか？", a: "はい、院長が最初から最後まで担当いたします。毎回同じ施術者なので、細かい変化も見逃しません。" },
+                { q: "毎回担当は変わりますか？", a: "いいえ、完全担当制です。毎回同じ施術者が担当するため、お身体の変化をしっかり把握しながら施術を行います。" },
                 { q: "支払い方法は？", a: "現金のほか、各種クレジットカード、電子マネーがご利用いただけます。" },
             ];
 
@@ -526,7 +526,7 @@
                                     <div className={`overflow-hidden transition-all duration-300 ${openIdx === i ? 'max-h-40 opacity-100 pb-4' : 'max-h-0 opacity-0'}`}>
                                         <div className="flex items-start gap-2.5 pl-0">
                                             <span className="text-skin-pink font-bold text-base">A</span>
-                                            <p className="text-sm text-skin-text/70 leading-relaxed">{item.a}</p>
+                                            <p className="text-sm text-skin-text/70 leading-relaxed whitespace-pre-line">{item.a}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -605,12 +605,19 @@
 
         /* ─── Sticky CTA ─── */
         const StickyCTA = () => (
-            <div className="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur border-t border-skin-peach/40 p-3 shadow-[0_-5px_20px_rgba(0,0,0,0.08)] z-[100]">
-                <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')}
-                   className="flex items-center justify-center bg-[#06C755] text-white rounded-full py-3.5 shadow-lg active:scale-95 transition-all text-base font-bold">
-                    <i className="fab fa-line text-2xl mr-2.5"></i>
-                    <span>LINEで30秒カンタン予約</span>
-                </a>
+            <div className="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur border-t border-skin-peach/40 p-2 shadow-[0_-5px_20px_rgba(0,0,0,0.08)] z-[100]">
+                <div className="max-w-md mx-auto flex gap-2">
+                    <a href="tel:070-5530-6656"
+                       className="flex-1 flex items-center justify-center bg-skin-rose text-white rounded-full py-3 shadow-md active:scale-95 transition-all text-[13px] font-bold leading-tight text-center">
+                        <i className="fas fa-phone-alt text-xl mr-2"></i>
+                        <span>今すぐ電話で<br />来店予約</span>
+                    </a>
+                    <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')}
+                       className="flex-1 flex items-center justify-center bg-[#06C755] text-white rounded-full py-3 shadow-md active:scale-95 transition-all text-[13px] font-bold leading-tight text-center">
+                        <i className="fab fa-line text-2xl mr-2"></i>
+                        <span>LINEで30秒<br />カンタン予約</span>
+                    </a>
+                </div>
             </div>
         );
 
