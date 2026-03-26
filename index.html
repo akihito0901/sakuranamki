@@ -423,6 +423,38 @@
             );
         };
 
+        /* ─── ⑦.5 お客様の声（写真） ─── */
+        const CustomerVoiceSection = () => {
+            const ref = useFadeUp();
+            const voices = [
+                { src: "./images/voice-1.png", alt: "長年の痛みが取れて嬉しい" },
+                { src: "./images/voice-2.png", alt: "説明が分かりやすい" },
+                { src: "./images/voice-3.png", alt: "指先まであった痺れが取れた" },
+                { src: "./images/voice-4.png", alt: "坐骨神経痛がよくなった" },
+                { src: "./images/voice-5.png", alt: "肩が上がるようになった" },
+                { src: "./images/voice-6.png", alt: "ずっと痛かった首と肩がスッキリ解消した" },
+            ];
+
+            return (
+                <div ref={ref} className="fade-up w-full bg-white pb-6 pt-10 border-t border-skin-peach/30">
+                    <div className="px-5 pb-8 text-center">
+                        <span className="text-skin-rose text-[10px] tracking-[0.3em] font-bold block mb-4">CUSTOMER VOICE</span>
+                        <h2 className="text-2xl font-bold text-skin-dark leading-relaxed">
+                            喜びの声が<br /><span className="text-skin-rose">続々と届いています！</span>
+                        </h2>
+                    </div>
+                    
+                    <div className="px-4 grid grid-cols-2 gap-3 mb-4">
+                        {voices.map((v, i) => (
+                            <div key={i} className="rounded-xl overflow-hidden shadow-sm bg-white border border-skin-peach/60 p-1">
+                                <img src={v.src} alt={v.alt} className="w-full h-auto rounded-lg block" loading="lazy" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
         /* ─── ⑧ 実績（Google口コミ） ─── */
         const ReviewsSection = () => {
             const ref = useFadeUp();
@@ -635,6 +667,7 @@
                     <SolutionSection />
                     <BenefitSection />
                     <FeatureSection />
+                    <CustomerVoiceSection />
                     <ReviewsSection />
                     <QASection />
                     <FinalCTA />
