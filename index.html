@@ -427,12 +427,12 @@
         const CustomerVoiceSection = () => {
             const ref = useFadeUp();
             const voices = [
-                { src: "./images/voice-1.png", title: "長年の痛みが取れて嬉しい", text: "「10年以上悩んでいた首肩の痛みが、数回の施術で本当に楽になりました。もっと早く来ればよかったです。ありがとうございました！」", attr: "40代 女性" },
-                { src: "./images/voice-6.png", title: "ずっと痛かった首と肩がスッキリ解消した", text: "「マッサージに行ってもすぐに戻ってしまっていたガチガチの首・肩が、根本から軽くなりました。朝のスッキリ感が全然違います！」", attr: "30代 女性" },
-                { src: "./images/voice-5.png", title: "肩が上がるようになった", text: "「服を着替えるのも痛くて上がらなかった肩が、すっかり元の生活に戻れました。丁寧な施術に感謝しています。」", attr: "50代 女性" },
-                { src: "./images/voice-3.png", title: "指先まであった痺れが取れた", text: "「病院では良くならなかった腕から指先にかけての痺れが、深層筋へのアプローチで嘘のように消えました。仕事にも集中できるようになり感謝です。」", attr: "40代 男性" },
-                { src: "./images/voice-4.png", title: "坐骨神経痛がよくなった", text: "「座っているのも辛かったお尻から足にかけての痛みが改善しました。今では子供と一緒に走れるようになり、毎日が楽しいです。」", attr: "30代 女性" },
-                { src: "./images/voice-2.png", title: "説明が分かりやすい", text: "「なぜ痛むのか、どうすれば治るのかを模型を使って素人にも分かりやすく説明してくれました。納得して施術を受けられました。」", attr: "30代 男性" },
+                { src: "./images/voice-1.png", title: "長年の痛みが取れて嬉しい", text: "「10年以上悩んでいた首肩の痛みが、数回の施術で本当に楽になりました。もっと早く来ればよかったです。ありがとうございました！」", attr: "30代女性" },
+                { src: "./images/voice-2.png", title: "説明が分かりやすい", text: "「なぜ痛むのか、どうすれば治るのかを模型を使って素人にも分かりやすく説明してくれました。納得して施術を受けられました。」", attr: "40代女性" },
+                { src: "./images/voice-3.png", title: "指先まであった痺れが取れた", text: "「病院では良くならなかった腕から指先にかけての痺れが、深層筋へのアプローチで嘘のように消えました。仕事にも集中できるようになり感謝です。」", attr: "50代女性" },
+                { src: "./images/voice-4.png", title: "坐骨神経痛がよくなった", text: "「座っているのも辛かったお尻から足にかけての痛みが改善しました。今では子供と一緒に走れるようになり、毎日が楽しいです。」", attr: "20代女性" },
+                { src: "./images/voice-5.png", title: "肩が上がるようになった", text: "「服を着替えるのも痛くて上がらなかった肩が、すっかり元の生活に戻れました。丁寧な施術に感謝しています。」", attr: "50代女性" },
+                { src: "./images/voice-6.png", title: "ずっと痛かった首と肩がスッキリ解消した", text: "「マッサージに行ってもすぐに戻ってしまっていたガチガチの首・肩が、根本から軽くなりました。朝のスッキリ感が全然違います！」", attr: "30代女性" },
             ];
 
             return (
@@ -453,6 +453,7 @@
                                         <div className="flex text-yellow-400 text-[10px] gap-0.5">
                                             <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
                                         </div>
+                                        <span className="text-[10px] text-skin-text/60 font-medium">{v.attr}</span>
                                     </div>
                                     <h3 className="font-bold text-skin-rose text-base mb-2 leading-snug">{v.title}</h3>
                                     <p className="text-sm text-skin-text/80 leading-relaxed">{v.text}</p>
