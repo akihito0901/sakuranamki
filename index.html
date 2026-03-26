@@ -407,10 +407,10 @@
                                 ) : (
                                     <img src={f.mediaSrc} alt="feature" className="w-full h-64 object-cover block" />
                                 )}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent"></div>
                                 <div className="absolute bottom-4 left-5 flex items-center gap-3">
-                                    <span className="text-skin-peach font-black text-3xl opacity-70">{f.num}</span>
-                                    <div className="h-px bg-skin-blush w-8"></div>
+                                    <span className="text-skin-dark font-black text-3xl opacity-80">{f.num}</span>
+                                    <div className="h-[2px] bg-skin-rose w-8"></div>
                                 </div>
                             </div>
                             <div className="px-5 py-8 bg-white border-b border-skin-peach/30">
@@ -428,11 +428,11 @@
             const ref = useFadeUp();
             const voices = [
                 { src: "./images/voice-1.png", title: "長年の痛みが取れて嬉しい", text: "「10年以上悩んでいた首肩の痛みが、数回の施術で本当に楽になりました。もっと早く来ればよかったです。ありがとうございました！」", attr: "30代女性" },
-                { src: "./images/voice-2.png", title: "説明が分かりやすい", text: "「なぜ痛むのか、どうすれば治るのかを模型を使って素人にも分かりやすく説明してくれました。納得して施術を受けられました。」", attr: "40代女性" },
-                { src: "./images/voice-3.png", title: "指先まであった痺れが取れた", text: "「病院では良くならなかった腕から指先にかけての痺れが、深層筋へのアプローチで嘘のように消えました。仕事にも集中できるようになり感謝です。」", attr: "50代女性" },
-                { src: "./images/voice-4.png", title: "坐骨神経痛がよくなった", text: "「座っているのも辛かったお尻から足にかけての痛みが改善しました。今では子供と一緒に走れるようになり、毎日が楽しいです。」", attr: "20代女性" },
+                { src: "./images/voice-2.png", title: "説明が分かりやすい", text: "「なぜ痛むのか、どうすれば治るのかを模型を使って素人にも分かりやすく説明してくれました。納得して施術を受けられました。」", attr: "30代女性" },
+                { src: "./images/voice-3.png", title: "指先まであった痺れが取れた", text: "「病院では良くならなかった腕から指先にかけての痺れが、深層筋へのアプローチで嘘のように消えました。仕事にも集中できるようになり感謝です。」", attr: "20代女性" },
+                { src: "./images/voice-4.png", title: "坐骨神経痛がよくなった", text: "「座っているのも辛かったお尻から足にかけての痛みが改善しました。今では子供と一緒に走れるようになり、毎日が楽しいです。」", attr: "50代女性" },
                 { src: "./images/voice-5.png", title: "肩が上がるようになった", text: "「服を着替えるのも痛くて上がらなかった肩が、すっかり元の生活に戻れました。丁寧な施術に感謝しています。」", attr: "50代女性" },
-                { src: "./images/voice-6.png", title: "ずっと痛かった首と肩がスッキリ解消した", text: "「マッサージに行ってもすぐに戻ってしまっていたガチガチの首・肩が、根本から軽くなりました。朝のスッキリ感が全然違います！」", attr: "30代女性" },
+                { src: "./images/voice-6.png", title: "ずっと痛かった首と肩がスッキリ解消した", text: "「マッサージに行ってもすぐに戻ってしまっていたガチガチの首・肩が、根本から軽くなりました。朝のスッキリ感が全然違います！」", attr: "40代女性" },
             ];
 
             return (
