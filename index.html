@@ -60,11 +60,16 @@
                     },
                     animation: {
                         'float': 'float 3s ease-in-out infinite',
+                        'flash-text': 'flashText 2s ease-in-out infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0px)' },
                             '50%': { transform: 'translateY(-6px)' },
+                        },
+                        flashText: {
+                            '0%, 100%': { opacity: '0.9', color: '#ffffff', textShadow: '0 0 5px rgba(255,255,255,0.5)' },
+                            '50%': { opacity: '1', color: '#FFDF73', textShadow: '0 0 10px rgba(255,223,115,0.8)' },
                         }
                     }
                 }
@@ -205,7 +210,7 @@
                     {/* BOTTOM: Catch copy + Price — left-aligned */}
                     <div className="text-left w-full mt-auto">
                         {/* Target text */}
-                        <p className="text-white text-[13px] font-bold tracking-widest mb-2 drop-shadow-md">
+                        <p className="text-white text-[13px] font-bold tracking-widest mb-2 drop-shadow-md animate-flash-text">
                             ＼ 30〜50代女性に選ばれています ／
                         </p>
 
