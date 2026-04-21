@@ -337,13 +337,29 @@
 
                     {/* Director greeting */}
                     <div className="px-5 py-8">
-                        <div className="flex items-center gap-3 mb-4">
+                        <div className="flex items-center gap-3 mb-5">
                             <img src="./images/director.webp" alt="院長" className="w-14 h-14 rounded-full object-cover shadow-md flex-shrink-0" />
                             <div>
                                 <p className="text-skin-dark font-bold text-sm">院長　今坂智和</p>
                                 <p className="text-xs text-skin-text/60">国家資格保有者</p>
                             </div>
                         </div>
+
+                        {/* YouTube sales video */}
+                        <div className="mb-5">
+                            <p className="text-[10px] text-skin-rose font-bold tracking-widest mb-2 text-center">▼ 院長からのメッセージをご覧ください</p>
+                            <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-skin-peach/40" style={{paddingTop: '56.25%'}}>
+                                <iframe
+                                    className="absolute inset-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/KWMeWBIzs2o?rel=0&modestbranding=1"
+                                    title="院長からのメッセージ"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            </div>
+                        </div>
+
                         <p className="text-sm leading-[2] text-skin-dark/80 mb-3">
                             私の<span className="text-skin-dark font-bold">10年の経験</span>から独自に生み出したオリジナルの深層筋集中整体で、表面の筋肉をもみほぐす一般的な施術とは異なり、<span className="text-skin-rose font-bold">骨に最も近い深部のコリをピンポイントで</span>とらえます。また、同時に固まってしまった関節の動きをだしていき、お身体を本来あるべき姿に戻していきます。
                         </p>
