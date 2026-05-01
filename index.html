@@ -710,46 +710,44 @@
         /* ─── Campaign Popup ─── */
         const CampaignPopup = ({ onClose }) => {
             return (
-                <div className="fixed inset-0 z-[200] flex items-center justify-center px-6 bg-black/60 backdrop-blur-sm transition-all animate-fade-in">
-                    <div className="rainbow-card w-full max-w-sm text-center relative overflow-hidden animate-scale-up">
-                        <div className="absolute -top-12 -right-12 w-24 h-24 bg-skin-rose/20 rounded-full blur-2xl"></div>
-                        <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-yellow-500/10 rounded-full blur-xl"></div>
-                        
+                <div className="fixed inset-0 z-[200] flex items-center justify-center px-5 bg-black/50 backdrop-blur-sm transition-all animate-fade-in">
+                    <div className="bg-white rounded-2xl w-full max-w-sm text-center relative overflow-hidden animate-scale-up p-7 shadow-2xl border-[3px] border-skin-peach/80">
                         <div className="relative z-10">
-                            <div className="inline-block bg-skin-rose text-white text-[10px] font-bold px-3 py-1 rounded-full mb-4 tracking-widest shadow-sm">
-                                SPECIAL CAMPAIGN
-                            </div>
-                            
-                            <h2 className="text-xl font-black text-skin-dark mb-4 leading-tight">
-                                現在初回キャンペーン中！
+                            <h2 className="text-[22px] font-black text-skin-rose mb-5 leading-tight tracking-tight drop-shadow-sm">
+                                初回限定キャンペーン！
                             </h2>
                             
-                            <div className="bg-skin-cream rounded-xl p-4 mb-6 border border-skin-peach/50">
-                                <p className="text-sm font-bold text-skin-text leading-relaxed mb-3">
-                                    72時間以内にご予約日を<br />確定した方はクーポンゲット！
+                            <div className="bg-skin-cream rounded-xl p-5 mb-5 border border-skin-blush/40 shadow-sm">
+                                <p className="text-[15px] font-bold text-skin-dark leading-relaxed mb-4">
+                                    72時間以内にご予約日を<br />確定した方は<span className="text-skin-rose border-b-2 border-skin-rose pb-0.5">クーポン適用！</span>
                                 </p>
-                                <div className="flex items-center justify-center gap-2">
-                                    <span className="text-xs text-skin-text/60 line-through">￥6,400</span>
-                                    <i className="fas fa-arrow-right text-skin-rose text-[10px]"></i>
-                                    <div className="flex items-baseline">
-                                        <span className="text-3xl font-black text-skin-rose">1,980</span>
-                                        <span className="text-xs font-bold text-skin-rose ml-1">円</span>
-                                        <span className="text-[10px] text-skin-text/40 ml-1">(税込)</span>
+                                <div className="flex flex-col items-center justify-center gap-1">
+                                    <div className="flex items-center gap-2 opacity-80">
+                                        <span className="text-xs font-bold text-skin-text">通常価格</span>
+                                        <span className="text-sm font-bold text-skin-text line-through">￥6,400</span>
+                                    </div>
+                                    <i className="fas fa-caret-down text-skin-rose text-lg my-0.5"></i>
+                                    <div className="flex items-baseline bg-white px-4 py-1.5 rounded-lg border border-skin-rose/20 shadow-sm">
+                                        <span className="text-4xl font-black text-skin-rose tracking-tighter">1,980</span>
+                                        <span className="text-sm font-bold text-skin-rose ml-1">円</span>
+                                        <span className="text-[10px] text-skin-text/60 ml-1">(税込)</span>
                                     </div>
                                 </div>
                             </div>
 
                             <button 
                                 onClick={onClose}
-                                className="w-full bg-skin-dark text-white font-bold py-4 rounded-xl shadow-lg hover:bg-skin-text active:scale-[0.98] transition-all flex items-center justify-center gap-2 group"
+                                className="w-full bg-skin-rose text-white font-bold text-base py-4 rounded-xl shadow-md hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 group"
                             >
-                                <span>続きを見る</span>
-                                <i className="fas fa-chevron-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                                <span>LPの続きを見る</span>
+                                <i className="fas fa-chevron-right text-sm group-hover:translate-x-1 transition-transform"></i>
                             </button>
                             
-                            <p className="text-[10px] text-skin-text/40 mt-4">
-                                ※定員に達し次第終了となります
-                            </p>
+                            <div className="mt-5">
+                                <span className="text-xs font-bold text-skin-text/80 bg-skin-cream/80 px-3 py-1.5 rounded-md border border-skin-peach/50 inline-block">
+                                    ※定員に達し次第、終了となります
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
