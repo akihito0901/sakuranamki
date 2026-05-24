@@ -591,9 +591,22 @@
                         <h2 className="text-xl font-bold text-skin-dark mb-6 px-5 leading-relaxed">
                             今ならLINE追加だけでも<br /><span className="text-skin-rose">豪華特典プレゼント中！</span>
                         </h2>
-                        <div className="space-y-4 mb-8">
-                            <img src="./images/popup-bonus.webp" alt="豪華特典プレゼント1" className="w-full h-auto block" />
-                            <img src="./images/bonus-extra.webp" alt="豪華特典プレゼント2" className="w-full h-auto block" />
+                        <div className="space-y-6 mb-8 px-5">
+                            <img src="./images/popup-bonus.webp" alt="豪華特典プレゼント1" className="w-full h-auto block rounded-2xl shadow-md border border-skin-peach/40" />
+                            
+                            <div className="relative rounded-2xl overflow-hidden shadow-md border border-skin-peach/40 bg-skin-cream">
+                                <img src="./images/bonus-video.png" alt="LINE登録者限定セルフケア動画" className="w-full h-auto block" />
+                                <div className="px-5 pb-5 pt-4 text-center bg-white border-t border-skin-peach/30">
+                                    <p className="text-[13px] font-bold text-skin-dark mb-3 tracking-wide flex items-center justify-center gap-1.5">
+                                        <i className="fab fa-instagram text-transparent bg-clip-text bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-lg"></i>
+                                        インスタで大好評！
+                                    </p>
+                                    <a href="https://www.instagram.com/reel/DUipb9KEz7F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white px-6 py-3 rounded-full text-[13px] font-bold shadow-md hover:-translate-y-0.5 active:scale-95 transition-all w-full">
+                                        <span>参考動画（インスタ）を見る</span>
+                                        <i className="fas fa-chevron-right text-[10px]"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <LineCTA />
                     </div>
