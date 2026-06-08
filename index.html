@@ -143,6 +143,15 @@
             50% { text-shadow: 0 0 20px rgba(255,223,115,1), 0 0 40px rgba(255,223,115,0.7), 0 2px 6px rgba(0,0,0,0.8); opacity: 1; }
         }
         .badge-glow { animation: pulse-glow 1.8s ease-in-out infinite; }
+
+        @keyframes btn-pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(234, 88, 12, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(234, 88, 12, 0); }
+        }
+        .animate-btn-pulse {
+            animation: btn-pulse 2s infinite;
+        }
     </style>
 </head>
 
@@ -651,38 +660,29 @@
         /* ─── Campaign Popup ─── */
         const CampaignPopup = ({ onClose }) => {
             return (
-                <div className="fixed inset-0 z-[200] flex items-center justify-center px-5 bg-black/50 backdrop-blur-sm transition-all animate-fade-in">
-                    <div className="bg-white rounded-2xl w-full max-w-sm text-center relative overflow-hidden animate-scale-up p-7 shadow-2xl border-[3px] border-skin-peach/80">
-                        <div className="relative z-10">
-                            <h2 className="text-[22px] font-black text-skin-rose mb-5 leading-tight tracking-tight drop-shadow-sm">
-                                1周年記念キャンペーン！
-                            </h2>
+                <div className="fixed inset-0 z-[200] flex items-center justify-center px-4 bg-black/70 backdrop-blur-sm transition-all animate-fade-in">
+                    <div className="relative w-full max-w-sm mx-auto animate-scale-up">
+                        {/* 閉じるボタン */}
+                        <button 
+                            onClick={onClose}
+                            className="absolute -top-10 right-0 text-white flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity z-10"
+                        >
+                            <i className="fas fa-times text-2xl drop-shadow-md"></i>
+                            <span className="text-[10px] font-bold tracking-widest drop-shadow-md">閉じる</span>
+                        </button>
+                        
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border-[3px] border-white/50">
+                            <img src="./images/popup-quiz.png" alt="コリが戻る理由は？" className="w-full h-auto block" />
                             
-                            <div className="bg-skin-cream rounded-xl p-5 mb-5 border border-skin-blush/40 shadow-sm">
-                                <p className="text-[17px] font-bold text-skin-dark leading-relaxed">
-                                    お友だち登録で<br /><span className="text-skin-rose border-b-2 border-skin-rose pb-0.5">クーポンゲット！</span>
-                                </p>
-                                <p className="text-xs text-skin-rose font-bold mt-2 leading-relaxed">
-                                    ⚠️3日以内にご予約日を確定した方に特別価格が適用されます。
-                                </p>
-                            </div>
-
-                            <div className="mb-6">
-                                <img src="./images/popup-1980.png" alt="特典" className="w-full h-auto rounded-xl shadow-md border border-skin-peach/30" />
-                            </div>
-
-                            <button 
-                                onClick={onClose}
-                                className="w-full bg-skin-rose text-white font-bold text-base py-4 rounded-xl shadow-md hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 group"
-                            >
-                                <span>続きを見る</span>
-                                <i className="fas fa-chevron-right text-sm group-hover:translate-x-1 transition-transform"></i>
-                            </button>
-                            
-                            <div className="mt-5">
-                                <span className="text-xs font-bold text-skin-text/80 bg-skin-cream/80 px-3 py-1.5 rounded-md border border-skin-peach/50 inline-block">
-                                    ※定員に達し次第、終了となります
-                                </span>
+                            {/* CTA Button overlay */}
+                            <div className="absolute bottom-[4%] left-0 w-full px-8 flex justify-center">
+                                <button 
+                                    onClick={onClose}
+                                    className="w-full max-w-[280px] bg-gradient-to-br from-[#ea580c] to-[#c2410c] text-white font-bold text-[17px] py-3.5 rounded-full shadow-lg active:scale-[0.96] transition-all flex items-center justify-center gap-2 group animate-btn-pulse"
+                                >
+                                    <span>続きをチェック！</span>
+                                    <i className="fas fa-chevron-down text-sm group-hover:translate-y-1 transition-transform"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
