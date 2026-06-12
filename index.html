@@ -437,44 +437,6 @@
             );
         };
 
-        /* ─── ⑦.5 お客様の声（写真） ─── */
-        const CustomerVoiceSection = () => {
-            const ref = useFadeUp();
-            const voices = [
-                { src: "./images/voice-1.png", title: "長年の痛みが取れて嬉しい", text: "「10年以上悩んでいた首肩の痛みが、数回の施術で本当に楽になりました。もっと早く来ればよかったです。ありがとうございました！」", attr: "30代女性" },
-                { src: "./images/voice-3.png", title: "指先まであった痺れが取れた", text: "「病院では良くならなかった腕から指先にかけての痺れが、深層筋へのアプローチで嘘のように消えました。仕事にも集中できるようになり感謝です。」", attr: "20代女性" },
-                { src: "./images/voice-6.png", title: "ずっと痛かった首と肩がスッキリ解消した", text: "「マッサージに行ってもすぐに戻ってしまっていたガチガチの首・肩が、根本から軽くなりました。朝のスッキリ感が全然違います！」", attr: "40代女性" },
-            ];
-
-            return (
-                <div ref={ref} className="fade-up w-full bg-skin-cream pb-12 pt-12 border-t border-skin-peach/50">
-                    <div className="px-5 pb-8 text-center">
-                        <span className="text-skin-rose text-[10px] tracking-[0.3em] font-bold block mb-4">CUSTOMER VOICE</span>
-                        <h2 className="text-2xl font-bold text-skin-dark leading-relaxed">
-                            喜びの声が<br /><span className="text-skin-rose">続々と届いています！</span>
-                        </h2>
-                    </div>
-                    
-                    <div className="px-5 space-y-6">
-                        {voices.map((v, i) => (
-                            <div key={i} className="bg-white rounded-2xl shadow-md border border-skin-peach/40 overflow-hidden transform transition hover:-translate-y-1">
-                                <img src={v.src} alt={v.title} className="w-full h-auto block border-b border-skin-peach/20" loading="lazy" />
-                                <div className="p-5">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <div className="flex text-yellow-400 text-[10px] gap-0.5">
-                                            <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
-                                        </div>
-                                        <span className="text-[10px] text-skin-text/60 font-medium">{v.attr}</span>
-                                    </div>
-                                    <h3 className="font-bold text-skin-rose text-base mb-2 leading-snug">{v.title}</h3>
-                                    <p className="text-sm text-skin-text/80 leading-relaxed">{v.text}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            );
-        };
 
         /* ─── ⑧ 実績（Google口コミ） ─── */
         const ReviewsSection = () => {
@@ -725,7 +687,6 @@
                     <CauseSection />
                     <FeatureSection />
                     <BonusSection />
-                    <CustomerVoiceSection />
                     <ReviewsSection />
                     <QASection />
                     <FinalCTA />
