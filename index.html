@@ -260,15 +260,8 @@
         /* ─── ① ヘッドライン ─── */
         const Headline = () => (
             <div className="pt-12 bg-white">
-                <div className="relative w-full aspect-[3/4] overflow-hidden">
-                    <video 
-                        src="./images/hero-v10.mp4"
-                        autoPlay 
-                        muted 
-                        loop 
-                        playsInline 
-                        className="w-full h-full object-cover" 
-                    />
+                <div className="w-full">
+                    <img src="./images/hero-new-image.png" alt="当院はここが違います" className="w-full h-auto block" />
                 </div>
             </div>
         );
@@ -278,7 +271,7 @@
             const ref = useFadeUp();
             return (
                 <div ref={ref} className="fade-up w-full bg-[#FCF8F5]">
-                    <img src="./images/empathy-new.png" alt="こんなお悩みありませんか？" className="w-full h-auto block drop-shadow-sm" />
+                    <img src="./images/empathy-new-image.png" alt="こんなお悩みありませんか？" className="w-full h-auto block drop-shadow-sm" />
                 </div>
             );
         };
@@ -298,8 +291,7 @@
             const ref = useFadeUp();
             return (
                 <div ref={ref} className="fade-up w-full">
-                    <img src="./images/cause-new-1.png" alt="なぜなにをしても肩こりが戻るのか？" className="w-full h-auto block" />
-                    <img src="./images/cause-new-2.png" alt="なぜなにをしても肩こりが戻るのか？" className="w-full h-auto block" />
+                    <img src="./images/cause-new-image.png" alt="なぜ、何をしてもコリが戻るのか" className="w-full h-auto block" />
                 </div>
             );
         };
