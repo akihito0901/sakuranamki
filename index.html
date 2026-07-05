@@ -412,6 +412,16 @@
             );
         };
 
+        /* ─── ⑥.5 他院との違い ─── */
+        const ComparisonSection = () => {
+            const ref = useFadeUp();
+            return (
+                <div ref={ref} className="fade-up w-full">
+                    <img src="./images/comparison-table.png" alt="他院との違い" className="w-full h-auto block" />
+                </div>
+            );
+        };
+
         /* ─── ⑦ 特徴（選ばれる理由） ─── */
         const FeatureSection = () => {
             const ref = useFadeUp();
@@ -723,6 +733,7 @@
                     <ClinicDifferenceSection />
                     <BenefitSection />
                     <ReviewsSection />
+                    <ComparisonSection />
                     <CauseSection />
                     <FeatureSection />
                     <BonusSection />
