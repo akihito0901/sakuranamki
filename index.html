@@ -191,12 +191,12 @@
             display: inline-block;
         }
 
-        @keyframes残り-pulse {
-            0%, 100% { color: #dc2626; text-shadow: 0 0 0px rgba(220,38,38,0); }
-            50%       { color: #ef4444; text-shadow: 0 0 16px rgba(239,68,68,0.7), 0 0 32px rgba(239,68,68,0.3); }
+        @keyframes zanri-blink {
+            0%, 45%, 100% { opacity: 1; }
+            50%, 95%      { opacity: 0; }
         }
         .animate-zanri {
-            animation: 残り-pulse 1.4s ease-in-out infinite;
+            animation: zanri-blink 1.2s ease-in-out infinite;
             display: inline-block;
         }
         @keyframes badge-warn {
@@ -271,13 +271,13 @@
                                 <span className="text-orange-400 mt-0.5 flex-shrink-0">▶</span>
                                 人気の夕方・土曜は<br />早めに埋まります
                             </p>
-                            <p className="flex items-start gap-2 text-sm text-skin-dark/70">
+                            <p className="flex items-start gap-2 text-sm text-skin-dark font-bold">
                                 <span className="text-orange-400 mt-0.5 flex-shrink-0">▶</span>
                                 院長が一人で担当しているため<br />予約数を限定しています
                             </p>
                         </div>
 
-                        <p className="font-mincho text-skin-rose font-bold text-base mb-7 animate-text-shimmer">
+                        <p className="font-mincho text-red-600 font-black text-xl mb-7 animate-badge-warn" style={{display:'inline-block'}}>
                             ご予約はお早めに！
                         </p>
 
