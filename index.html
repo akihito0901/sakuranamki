@@ -190,6 +190,23 @@
             animation: text-shimmer 2.4s ease-in-out infinite;
             display: inline-block;
         }
+
+        @keyframes残り-pulse {
+            0%, 100% { color: #dc2626; text-shadow: 0 0 0px rgba(220,38,38,0); }
+            50%       { color: #ef4444; text-shadow: 0 0 16px rgba(239,68,68,0.7), 0 0 32px rgba(239,68,68,0.3); }
+        }
+        .animate-zanri {
+            animation: 残り-pulse 1.4s ease-in-out infinite;
+            display: inline-block;
+        }
+        @keyframes badge-warn {
+            0%, 100% { background-color: #ea580c; transform: scale(1); }
+            50%       { background-color: #dc2626; transform: scale(1.04); }
+        }
+        .animate-badge-warn {
+            animation: badge-warn 1.6s ease-in-out infinite;
+            display: inline-block;
+        }
     </style>
 </head>
 
@@ -225,15 +242,47 @@
             return ref;
         };
 
-        /* ─── ⑦.6 LINE特典セクション ─── */
+        /* ─── ⑦.6 予約枠セクション ─── */
         const BonusSection = () => {
             const ref = useFadeUp();
             return (
-                <div ref={ref} className="fade-up bg-white w-full text-center pt-14 pb-12">
-                    <h2 className="font-mincho text-xl font-bold text-skin-dark mb-6 px-5 leading-relaxed">
-                        今ならLINE追加だけでも<br /><span className="text-skin-rose">豪華特典プレゼント中！</span>
-                    </h2>
-                    <LineCTA />
+                <div ref={ref} className="fade-up w-full bg-[#FFF8F0] border-t-4 border-orange-400">
+                    <div className="px-6 pt-12 pb-10 text-center">
+
+                        {/* 残り枠バッジ */}
+                        <div className="mb-6">
+                            <span className="animate-badge-warn inline-block text-white text-xs font-black px-4 py-1.5 rounded-full tracking-widest shadow-md">
+                                ⚠ 今週の予約受付中
+                            </span>
+                        </div>
+
+                        {/* メインコピー */}
+                        <p className="font-mincho text-skin-dark font-bold text-lg mb-2 leading-relaxed">
+                            今週の予約は残り
+                        </p>
+                        <p className="mb-6">
+                            <span className="animate-zanri font-black text-[64px] leading-none tracking-tight">5</span>
+                            <span className="text-2xl font-black text-red-600 ml-1">名</span>
+                        </p>
+
+                        {/* サブテキスト */}
+                        <div className="bg-white rounded-2xl px-5 py-5 mb-7 shadow-sm border border-orange-100 text-left space-y-3 max-w-xs mx-auto">
+                            <p className="flex items-start gap-2 text-sm text-skin-dark font-bold">
+                                <span className="text-orange-400 mt-0.5 flex-shrink-0">▶</span>
+                                人気の夕方・土曜は<br />早めに埋まります
+                            </p>
+                            <p className="flex items-start gap-2 text-sm text-skin-dark/70">
+                                <span className="text-orange-400 mt-0.5 flex-shrink-0">▶</span>
+                                院長が一人で担当しているため<br />予約数を限定しています
+                            </p>
+                        </div>
+
+                        <p className="font-mincho text-skin-rose font-bold text-base mb-7 animate-text-shimmer">
+                            ご予約はお早めに！
+                        </p>
+
+                        <LineCTA />
+                    </div>
                 </div>
             );
         };
