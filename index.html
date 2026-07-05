@@ -180,6 +180,15 @@
         .cta-line-animated a {
             animation: cta-shake 0.85s ease-out, cta-glow 2s ease-in-out 0.9s infinite;
         }
+
+        @keyframes text-shimmer {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.7; transform: scale(1.03); }
+        }
+        .animate-text-shimmer {
+            animation: text-shimmer 2.4s ease-in-out infinite;
+            display: inline-block;
+        }
     </style>
 </head>
 
@@ -313,7 +322,7 @@
             const ref = useFadeUp();
             return (
                 <div ref={ref} className="fade-up w-full bg-[#FCF8F5]">
-                    <img src="./images/problem-new.png" alt="そのまま放置しておくと…" className="w-full h-auto block drop-shadow-sm" />
+                    <img src="./images/problem-new-image.png" alt="そのまま放置しておくと…" className="w-full h-auto block drop-shadow-sm" />
                 </div>
             );
         };
@@ -401,9 +410,8 @@
                     <img src="./images/benefit-new.png" alt="こんな未来が待っています！" className="w-full h-auto block" />
 
                     <div className="px-5 py-10 text-center">
-                        <p className="text-base text-skin-dark leading-relaxed font-bold mb-8 max-w-xs mx-auto">
-                            この未来を手に入れるために、<br />
-                            まずは<span className="text-skin-rose border-b border-skin-rose pb-0.5">初回体験</span>で<br className="md:hidden" />その違いを実感してください。
+                        <p className="text-lg text-skin-dark font-black mb-8 max-w-xs mx-auto leading-relaxed">
+                            <span className="animate-text-shimmer text-skin-rose">あとは、体で確かめるだけ。</span>
                         </p>
 
                         <LineCTA />
