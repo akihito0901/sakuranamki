@@ -162,6 +162,24 @@
         .animate-btn-pulse {
             animation: btn-pulse 2s infinite;
         }
+
+        @keyframes cta-shake {
+            0%   { transform: translateX(0) scale(1); }
+            10%  { transform: translateX(-5px) scale(1.04); }
+            20%  { transform: translateX(5px) scale(1.04); }
+            30%  { transform: translateX(-5px) scale(1.04); }
+            40%  { transform: translateX(5px) scale(1.04); }
+            55%  { transform: translateX(0) scale(1.04); }
+            70%  { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+        @keyframes cta-glow {
+            0%, 100% { box-shadow: 0 10px 30px rgba(6,199,85,0.4); }
+            50%       { box-shadow: 0 10px 50px rgba(6,199,85,0.85), 0 0 70px rgba(6,199,85,0.35); }
+        }
+        .cta-line-animated a {
+            animation: cta-shake 0.85s ease-out, cta-glow 2s ease-in-out 0.9s infinite;
+        }
     </style>
 </head>
 
@@ -224,22 +242,36 @@
         };
 
         /* ─── LINE CTA ─── */
-        const LineCTA = ({ className = "" }) => (
-            <div className={`w-full px-4 ${className}`}>
-                <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')}
-                   className="block w-full bg-gradient-to-br from-[#06C755] to-[#04a044] text-white font-bold py-5 rounded-xl shadow-[0_10px_30px_rgba(6,199,85,0.4)] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(6,199,85,0.5)] active:scale-[0.97] transition-all relative overflow-hidden group">
-                    <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-12 -ml-10 group-hover:ml-[120%] transition-all duration-700"></div>
-                    <div className="flex flex-col items-center gap-1 relative z-10">
-                        <span className="text-[10px] tracking-widest bg-black/20 px-3 py-0.5 rounded-full">＼ 24時間受付・LINEで完結 ／</span>
-                        <div className="flex items-center gap-3 mt-1">
-                            <i className="fab fa-line text-4xl drop-shadow-md"></i>
-                            <span className="text-[17px] sm:text-xl font-black tracking-tight leading-snug">今すぐLINEで<br className="sm:hidden" />空き状況を確認する</span>
+        const LineCTA = ({ className = "" }) => {
+            const ref = useRef(null);
+            const [fired, setFired] = useState(false);
+
+            useEffect(() => {
+                const obs = new IntersectionObserver(
+                    ([e]) => { if (e.isIntersecting && !fired) { setFired(true); obs.disconnect(); } },
+                    { threshold: 0.6 }
+                );
+                if (ref.current) obs.observe(ref.current);
+                return () => obs.disconnect();
+            }, [fired]);
+
+            return (
+                <div ref={ref} className={`w-full px-4 ${fired ? 'cta-line-animated' : ''} ${className}`}>
+                    <a href="https://lin.ee/uqCRkRL" onClick={() => window.fbq('track', 'Lead')}
+                       className="block w-full bg-gradient-to-br from-[#06C755] to-[#04a044] text-white font-bold py-5 rounded-xl shadow-[0_10px_30px_rgba(6,199,85,0.4)] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(6,199,85,0.5)] active:scale-[0.97] transition-all relative overflow-hidden group">
+                        <div className="absolute inset-0 w-1/4 h-full bg-white/20 skew-x-12 -ml-10 group-hover:ml-[120%] transition-all duration-700"></div>
+                        <div className="flex flex-col items-center gap-1 relative z-10">
+                            <span className="text-[10px] tracking-widest bg-black/20 px-3 py-0.5 rounded-full">＼ 24時間受付・LINEで完結 ／</span>
+                            <div className="flex items-center gap-3 mt-1">
+                                <i className="fab fa-line text-4xl drop-shadow-md"></i>
+                                <span className="text-[17px] sm:text-xl font-black tracking-tight leading-snug">今すぐLINEで<br className="sm:hidden" />空き状況を確認する</span>
+                            </div>
+                            <span className="text-[10px] mt-1 opacity-80">※タップするとLINEアプリが開きます</span>
                         </div>
-                        <span className="text-[10px] mt-1 opacity-80">※タップするとLINEアプリが開きます</span>
-                    </div>
-                </a>
-            </div>
-        );
+                    </a>
+                </div>
+            );
+        };
 
         /* ─── Sticky Header ─── */
         const StickyHeader = () => (
