@@ -350,6 +350,16 @@
             );
         };
 
+        /* ─── ⑤.5 当院はここが違います ─── */
+        const ClinicDifferenceSection = () => {
+            const ref = useFadeUp();
+            return (
+                <div ref={ref} className="fade-up w-full">
+                    <img src="./images/clinic-difference.png" alt="当院はここが違います" className="w-full h-auto block" />
+                </div>
+            );
+        };
+
         /* ─── ⑥ ベネフィット + 中盤CTA ─── */
         const BenefitSection = () => {
             const ref = useFadeUp();
@@ -678,6 +688,7 @@
                     <EmpathySection />
                     <ProblemSection />
                     <SolutionSection />
+                    <ClinicDifferenceSection />
                     <BenefitSection />
                     <CauseSection />
                     <FeatureSection />
