@@ -192,12 +192,23 @@
         }
 
         @keyframes zanri-blink {
-            0%, 45%, 100% { opacity: 1; }
-            50%, 95%      { opacity: 0; }
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+                text-shadow: 0 0 0 rgba(220, 38, 38, 0);
+            }
+            50% {
+                opacity: 0.72;
+                transform: scale(1.045);
+                text-shadow: 0 0 10px rgba(220, 38, 38, 0.28);
+            }
         }
         .animate-zanri {
-            animation: zanri-blink 1.2s ease-in-out infinite;
+            animation: zanri-blink 2s ease-in-out infinite;
             display: inline-block;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-zanri { animation: none; }
         }
         @keyframes badge-warn {
             0%, 100% { background-color: #ea580c; transform: scale(1); }
@@ -358,7 +369,7 @@
                 </p>
                 <p className="font-mincho text-skin-dark text-[19px] font-black leading-relaxed mt-1">
                     今月のご新規様は、残り<br />
-                    <span className="text-red-600 text-[34px] leading-none mx-1">5</span>
+                    <span className="animate-zanri text-red-600 text-[34px] leading-none mx-1">5</span>
                     名で受付終了です。
                 </p>
                 <p className="text-[11px] text-skin-muted font-bold mt-3">ご希望の方は、お早めに空き状況をご確認ください。</p>
