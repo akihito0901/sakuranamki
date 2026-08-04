@@ -252,17 +252,18 @@
                         {/* 残り枠バッジ */}
                         <div className="mb-6">
                             <span className="animate-badge-warn inline-block text-white text-xs font-black px-4 py-1.5 rounded-full tracking-widest shadow-md">
-                                ⚠ 今週の予約受付中
+                                ⚠ 今月のご新規様 受付中
                             </span>
                         </div>
 
                         {/* メインコピー */}
                         <p className="font-mincho text-skin-dark font-bold text-lg mb-2 leading-relaxed">
-                            今週の予約は残り
+                            現在、ご予約が大変混み合っております。<br />
+                            今月のご新規様は、残り
                         </p>
                         <p className="mb-6">
                             <span className="animate-zanri font-black text-[64px] leading-none tracking-tight">5</span>
-                            <span className="text-2xl font-black text-red-600 ml-1">名</span>
+                            <span className="text-2xl font-black text-red-600 ml-1">名で受付終了です</span>
                         </p>
 
                         {/* サブテキスト */}
@@ -342,6 +343,26 @@
                     <img src="./images/hero-new-image-v2.png" alt="当院はここが違います" className="w-full h-auto block" />
                 </div>
             </div>
+        );
+
+        /* ─── ①.5 予約状況のお知らせ ─── */
+        const HeroAvailabilityNotice = () => (
+            <section className="w-full bg-gradient-to-r from-[#FFF4EB] via-[#FFF9F4] to-[#FFF4EB] border-y border-orange-200 px-5 py-6 text-center" aria-label="現在の予約状況">
+                <p className="inline-flex items-center gap-2 text-orange-700 text-xs font-black tracking-wider mb-3">
+                    <span className="block w-8 h-px bg-orange-300" aria-hidden="true"></span>
+                    ご予約をご検討中の方へ
+                    <span className="block w-8 h-px bg-orange-300" aria-hidden="true"></span>
+                </p>
+                <p className="font-mincho text-skin-dark text-[17px] font-bold leading-relaxed">
+                    現在、ご予約が大変混み合っております。
+                </p>
+                <p className="font-mincho text-skin-dark text-[19px] font-black leading-relaxed mt-1">
+                    今月のご新規様は、残り<br />
+                    <span className="text-red-600 text-[34px] leading-none mx-1">5</span>
+                    名で受付終了です。
+                </p>
+                <p className="text-[11px] text-skin-muted font-bold mt-3">ご希望の方は、お早めに空き状況をご確認ください。</p>
+            </section>
         );
 
         /* ─── ② 悩みの共感 ─── */
@@ -781,6 +802,7 @@
                     {showPopup && <CampaignPopup onClose={() => setShowPopup(false)} />}
                     <StickyHeader />
                     <Headline />
+                    <HeroAvailabilityNotice />
                     <EmpathySection />
                     <ProblemSection />
                     <CauseSection />
